@@ -11,6 +11,10 @@ const getEventos = (req,res=express.response)=>{
 
 const crearEvento = (req, res= express.response)=>{
 
+    //Verificar que en el body venga el evento
+    console.log(req.body)
+
+
     res.json(
         {
             ok:true,

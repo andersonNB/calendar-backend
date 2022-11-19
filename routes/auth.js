@@ -18,6 +18,7 @@ router.post('/new',
     check('name', 'EL nombre es obligatorio').not().isEmpty(),
     check('email', 'EL email es obligatorio').isEmail(),
     check('password', 'El password debe de ser de 6 caracteres').isLength({ min: 6 }),
+    //Esta funcion es la encargada de recoger los resultados de los checks de arriba
     validarCampos
   ],
   crearUsuario)

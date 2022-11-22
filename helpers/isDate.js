@@ -13,10 +13,10 @@ const moment = require('moment');
  */
 const isDate = (value, {req,location,path})=>{
 
-    console.log(value)
-    console.log("req:", req)
-    console.log("location: ",location)
-    console.log("path: ", path)
+    // console.log(value)
+    // console.log("req:", req)
+    // console.log("location: ",location)
+    // console.log("path: ", path)
 
     //SI no existe lo que viene de la fecha retornamos false
     if(!value){

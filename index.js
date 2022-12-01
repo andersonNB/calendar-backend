@@ -29,6 +29,13 @@ app.use('/api/auth', require('./routes/auth'))
 // TODO: crud: eventos
 app.use('/api/events', require('./routes/events'))
 
+//Por si llega alguna ruta que no sean las especificadas anteriormente
+//este index.html es el index que creamos ene l bluid del front
+app.get('*',(req,res) => {
+    res.sendFile(__dirname + '/public/index.html');
+})
+
+
 //Escuchar peticiones
 app.listen(process.env.PORT, () => {
     console.log(`Servidor corriendo en el puerto ${4000}`)
